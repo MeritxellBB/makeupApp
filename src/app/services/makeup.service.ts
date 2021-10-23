@@ -1,10 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Product } from '../pages/home/models/product';
+import { Product } from '../core/models/product';
 
 const baseUrl: string = "http://makeup-api.herokuapp.com/api/v1/products.json";
-const maybellineProducts: string = baseUrl + "?brand=maybelline";
-const typeBlush: string = baseUrl + "?product_type=blush";
 
 @Injectable()
 export class MakeupService {
@@ -34,9 +32,13 @@ export class MakeupService {
 
   constructor(private http: HttpClient) {}
   
-  getProducts() {
-    return this.http.get(typeBlush);
+  getProductsByType(type: string) {
+    return this.http.get(baseUrl + `?product_type=${type}`);
   } 
-  
+
+  getProductsByBrand(brand: string) {
+    return this.http.get(baseUrl + `?brand=${brand}`);
+  } 
+
 }
 

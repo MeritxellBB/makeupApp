@@ -10,9 +10,8 @@ export class NavbarComponent implements OnInit {
 
   public menuitem: MenuItem[] = [
     {imgUrl: "/assets/home.png", url: "/"},
-    {imgUrl: "/assets/lipstick.png", url: "/"},
-    {imgUrl: "/assets/blush.png", url: "/"},
-    {imgUrl: "/assets/eyeshadow1.png", url: "/"}
+    {imgUrl: "/assets/lipstick.png", url: "/lipstick"},
+    {imgUrl: "/assets/blush.png", url: "/blush"},
   ]
 
   constructor() { }

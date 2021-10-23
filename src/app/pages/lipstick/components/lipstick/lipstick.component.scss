@@ -1,0 +1,45 @@
+.homeContainer {
+    padding: 5vw;
+  }
+  
+  h1 {
+    font-family: "Spartan", sans-serif;
+    font-size: 18px;
+  }
+  
+  .productList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: "Spartan", sans-serif;
+  }
+  
+  .productContainer {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    margin: 1.5vw;
+    font-size: 12px;
+    p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .product-price {
+      font-family: "Poppins", sans-serif;
+      color: #040415;
+      opacity: 0.5;
+      font-size: 11px;
+    }
+    .imageContainer {
+      height: 40vw;
+      box-shadow: 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+      filter: drop-shadow(0px 0px 1px rgba(12, 26, 75, 0.24));
+      border-radius: 16px;
+      margin-bottom: 10px;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  
