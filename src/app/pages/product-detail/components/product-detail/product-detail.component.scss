@@ -1,35 +1,51 @@
 .detailContainer {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+  font-family: "Spartan", sans-serif;
+  font-size: 12px;
+  p {
+    margin-bottom: 0;
+  }
+  .imageContainer {
     display: flex;
-    flex-direction: column;
-    padding-bottom: 50px;
-    font-family: "Spartan", sans-serif;
-    font-size: 12px;
-    p {
-        margin-bottom: 0;
+    justify-content: center;
+    margin-bottom: 20px;
+    img {
+      width: 50%;
     }
-    .imageContainer {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-        img {
-            width: 50%;
-        }
-    }
-    .priceAndBrandContainer {
-        display: flex;
-        justify-content: space-between;
-        text-transform: capitalize;
-        color: #040415;
-        opacity: 0.5;
-        font-size: 11px;
-    }
-    .description {
-        color: #040415;
-        opacity: 0.4;
-        line-height: 22px;
-        text-align: justify;
-    }
+  }
+  .priceAndBrandContainer {
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    color: #040415;
+    opacity: 0.5;
+    font-size: 11px;
+  }
+  .description {
+    color: #040415;
+    opacity: 0.4;
+    line-height: 22px;
+    text-align: justify;
+  }
 }
 
-
-
+@media only screen and (min-width: 1280px) {
+  .detailContainer {
+    flex-direction: row;
+    justify-content: center;
+    .detailPhotoAndInfo {
+        width: 25%;
+    }
+    .imageContainer {
+        justify-content: flex-start;
+    }
+    .description {
+        width: 50%;
+    }
+    .priceAndBrandContainer {
+        flex-direction: column;
+    }
+  }
+}
