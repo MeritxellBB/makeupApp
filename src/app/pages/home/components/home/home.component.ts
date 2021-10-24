@@ -26,8 +26,4 @@ export class HomeComponent implements OnInit {
       }
     });
   }
-
-  showDetail() {
-    console.log("Ahora voy a mostrar el detalle");
-  }
 }

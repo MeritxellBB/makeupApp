@@ -7,8 +7,6 @@ const baseUrl: string = "http://makeup-api.herokuapp.com/api/v1/products.json";
 @Injectable()
 export class MakeupService {
 
-  private productsList: Product[] = [];
-
   constructor(private http: HttpClient) {}
   
   getProductsByType(type: string) {
