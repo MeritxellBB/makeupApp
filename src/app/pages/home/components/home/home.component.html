@@ -1,7 +1,7 @@
 <div class="homeContainer">
-    <h1>Recomendados</h1>
+    <h1>Recommended</h1>
     <div class="productList">
-        <div class="productContainer" *ngFor="let product of productsList">
+        <div class="productContainer" *ngFor="let product of productsList" routerLink="{{product.id}}">
             <div class="imageContainer">
                 <img src="{{product.url}}" alt="">
             </div>

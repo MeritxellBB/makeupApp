@@ -4,7 +4,7 @@
         <img src="/assets/blushblush1.png" alt="">
     </div>
     <div class="productList">
-        <div class="productContainer" *ngFor="let product of productsList">
+        <div class="productContainer" *ngFor="let product of productsList"  routerLink="{{product.id}}">
             <div class="imageContainer">
                 <img src="{{product.url}}" alt="">
             </div>

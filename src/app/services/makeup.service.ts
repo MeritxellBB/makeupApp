@@ -7,28 +7,7 @@ const baseUrl: string = "http://makeup-api.herokuapp.com/api/v1/products.json";
 @Injectable()
 export class MakeupService {
 
-  private productsList: Product[] = [
-    {
-      name: "Producto 1",
-      url: "/assets/lipstick1.jpg",
-      price: "10€"
-    },
-    {
-      name: "Producto 2",
-      url: "/assets/lipstick1.jpg",
-      price: "10€"
-    },
-    {
-      name: "Producto 3",
-      url: "/assets/lipstick1.jpg",
-      price: "10€"
-    },
-    {
-      name: "Producto 4",
-      url: "/assets/lipstick1.jpg",
-      price: "10€"
-    }
-  ];
+  private productsList: Product[] = [];
 
   constructor(private http: HttpClient) {}
   
@@ -39,6 +18,10 @@ export class MakeupService {
   getProductsByBrand(brand: string) {
     return this.http.get(baseUrl + `?brand=${brand}`);
   } 
+
+  getProductDetail(id: any) {
+    return this.http.get(`https://makeup-api.herokuapp.com/api/v1/products/${id}.json`)
+  }
 
 }
 

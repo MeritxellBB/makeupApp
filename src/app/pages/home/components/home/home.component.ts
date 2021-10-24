@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
     this.makeupService.getProductsByBrand("milani").subscribe((data:any) => {
       for (const product of data) {
         const myProduct: Product = {
+          id: product.id,
           name: product.name,
           url: product.image_link,
           price: product.price
@@ -24,5 +25,9 @@ export class HomeComponent implements OnInit {
         this.productsList.push(myProduct);
       }
     });
+  }
+
+  showDetail() {
+    console.log("Ahora voy a mostrar el detalle");
   }
 }

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LipstickModule } from './pages/lipstick/lipstick.module';
 import { BlushModule } from './pages/blush/blush.module';
+import { ProductDetailModule } from './pages/product-detail/product-detail.module';
 
 const routes: Routes = [
   {
@@ -13,6 +14,15 @@ const routes: Routes = [
   },
   {
     path: "blush", loadChildren: () => import('./pages/blush/blush.module'). then(m=>BlushModule) 
+  },
+  {
+    path: "home/:id",  loadChildren: () => import('./pages/product-detail/product-detail.module'). then(m=>ProductDetailModule) 
+  },
+  {
+    path: "blush/:id",  loadChildren: () => import('./pages/product-detail/product-detail.module'). then(m=>ProductDetailModule) 
+  },
+  {
+    path: "lipstick/:id",  loadChildren: () => import('./pages/product-detail/product-detail.module'). then(m=>ProductDetailModule) 
   },
   {
     path: "", redirectTo: "/home", pathMatch: "full"

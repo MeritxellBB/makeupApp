@@ -15,6 +15,7 @@ export class BlushComponent implements OnInit {
     this.makeupService.getProductsByType("blush").subscribe((data:any) => {
       for (const product of data) {
         const myProduct: Product = {
+          id: product.id,
           name: product.name,
           url: product.image_link,
           price: product.price
