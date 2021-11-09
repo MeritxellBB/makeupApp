@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   constructor(private makeupService: MakeupService) {}
 
   ngOnInit(): void {
-    this.makeupService.getProductsByBrand("milani").subscribe((data:any) => {
+    this.makeupService.getProductsByBrand("smashbox").subscribe((data:any) => {
       for (const product of data) {
         const myProduct: Product = {
           id: product.id,
